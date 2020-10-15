@@ -21,11 +21,8 @@ async function go() {
   go()
 }
 
-async function waait(amount) {
-  return new Promise((resolve) => setTimeout(resolve, amount))
+async function waait(amount: number = 0): Promise<any> {
+  return new Promise(resolve => setTimeout(resolve, amount))
 }
 
-console.log("Let's party hard!")
-waait(1000).then(() => {
-  go()
-})
+go()
